@@ -1,14 +1,10 @@
 ---
 ---
 
-<!-- CRT scanlines + flicker + vignette -->
-<div class="fixed inset-0 pointer-events-none z-50">
-  <!-- Scanlines -->
-  <div class="absolute inset-0 opacity-[0.04]" style="background: repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(0,255,65,0.1) 1px, rgba(0,255,65,0.1) 2px);"></div>
+<!-- CRT overlay effects -->
+<div class="crt-scanlines" aria-hidden="true"></div>
+<div class="crt-vignette" aria-hidden="true"></div>
 
-  <!-- CRT flicker -->
-  <div class="absolute inset-0" style="animation: crt-flicker 0.15s infinite;"></div>
-
-  <!-- Vignette -->
-  <div class="absolute inset-0 vignette"></div>
-</div>
+<script>
+  document.body.classList.add('crt-flicker');
+</script>

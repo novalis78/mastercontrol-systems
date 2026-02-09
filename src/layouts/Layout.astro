@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-  title = "Master Control Program — Persistent Memory for Autonomous AI Agents",
-  description = "MCP: an open-source persistent memory system for autonomous AI agents. Heartbeat daemon, multi-model support, MCP tools, and session management."
+  title = "Master Control Program — Persistent Memory for AI Agents",
+  description = "MCP v2.0: Autonomous persistent memory, heartbeat daemon, and multi-model support for AI agents. Open source. MIT License."
 } = Astro.props;
 
 const canonicalUrl = "https://mastercontrol.systems";
@@ -43,9 +43,8 @@ const canonicalUrl = "https://mastercontrol.systems";
       "description": description,
       "url": canonicalUrl,
       "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "macOS, Linux",
-      "license": "https://opensource.org/licenses/MIT",
-      "programmingLanguage": "Python"
+      "operatingSystem": "Cross-platform",
+      "license": "https://opensource.org/licenses/MIT"
     })} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -56,7 +55,7 @@ const canonicalUrl = "https://mastercontrol.systems";
 
     <title>{title}</title>
   </head>
-  <body class="bg-void text-text antialiased overflow-x-hidden">
+  <body class="bg-void text-text antialiased overflow-x-hidden font-mono">
     <slot />
   </body>
 </html>

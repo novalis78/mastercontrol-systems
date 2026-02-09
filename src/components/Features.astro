@@ -1,53 +1,57 @@
 ---
 const features = [
   {
+    tag: "DAEMON",
     name: "HEARTBEAT",
-    description: "Autonomous background daemon that maintains persistent context. Runs on configurable intervals, processes observations, and keeps memory fresh without manual intervention.",
-    tag: "DAEMON"
+    description: "Autonomous background daemon that maintains persistent AI context across sessions. No manual intervention required.",
+    flag: "--heartbeat"
   },
   {
+    tag: "STORAGE",
     name: "MEMORY",
-    description: "Persistent context storage across sessions. Semantic search over observations, automatic summarization, and intelligent pruning. Your agents remember everything.",
-    tag: "CORE"
+    description: "Persistent context storage with semantic search. Your AI remembers everything across conversations.",
+    flag: "--memory"
   },
   {
+    tag: "MODELS",
     name: "MULTI-MODEL",
-    description: "Seamless switching between LLM providers. OpenAI, Anthropic, local models — one interface, any backend. Hot-swap without losing context.",
-    tag: "INTERFACE"
+    description: "Seamless switching between Claude, GPT, Gemini, and local models. One memory, any brain.",
+    flag: "--model"
   },
   {
+    tag: "PROTOCOL",
     name: "MCP-TOOLS",
-    description: "Extensible tool system following the Model Context Protocol. Add custom tools, connect external services, and extend agent capabilities through a standardized interface.",
-    tag: "EXTENSIBLE"
+    description: "Extensible tool system via Model Context Protocol. Add capabilities without modifying core.",
+    flag: "--tools"
   },
   {
+    tag: "CODE",
     name: "LSP",
-    description: "Language Server Protocol integration for code-aware context. Your agents understand your codebase structure, dependencies, and patterns.",
-    tag: "CODE"
+    description: "Language Server Protocol integration for real-time code context. Your AI understands your codebase.",
+    flag: "--lsp"
   },
   {
-    name: "SESSION",
-    description: "Multi-session management with isolated contexts. Run parallel agent sessions, share memory between them, and maintain clean separation of concerns.",
-    tag: "MANAGEMENT"
+    tag: "SESSION",
+    name: "MULTI-SESSION",
+    description: "Run parallel AI sessions with shared or isolated memory contexts.",
+    flag: "--session"
   }
 ];
 ---
 
-<section class="relative py-20 sm:py-28 px-6">
+<section class="py-24 px-6">
   <div class="max-w-5xl mx-auto">
-    <div class="reveal mb-16">
-      <p class="font-mono text-xs text-green-dim mb-2">&gt; SYSTEM CAPABILITIES</p>
-      <h2 class="font-display text-3xl sm:text-4xl text-green phosphor-subtle">Feature Matrix</h2>
+    <div class="reveal mb-12 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl text-green phosphor-glow">&gt; SYSTEM CAPABILITIES</h2>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
       {features.map((f, i) => (
         <div class={`reveal reveal-delay-${(i % 3) + 1} glass-panel p-6`}>
-          <div class="flex items-center justify-between mb-3">
-            <h3 class="font-display text-xl text-green">{f.name}</h3>
-            <span class="font-mono text-[10px] text-green-dim border border-green-dim/30 px-2 py-0.5">{f.tag}</span>
-          </div>
-          <p class="font-body text-sm text-text-dim leading-relaxed">{f.description}</p>
+          <div class="font-mono text-xs text-green-dim tracking-widest mb-3">{f.tag}</div>
+          <h3 class="font-display text-xl text-green mb-3">{f.name}</h3>
+          <p class="font-body text-sm text-text leading-relaxed mb-4">{f.description}</p>
+          <div class="font-mono text-xs text-green-dim">{f.flag}</div>
         </div>
       ))}
     </div>

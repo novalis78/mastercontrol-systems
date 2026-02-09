@@ -1,36 +1,37 @@
 ---
 ---
 
-<section class="relative py-20 sm:py-28 px-6 bg-screen">
-  <div class="max-w-3xl mx-auto">
-    <div class="reveal mb-12">
-      <p class="font-mono text-xs text-green-dim mb-2">&gt; INSTALLATION</p>
-      <h2 class="font-display text-3xl sm:text-4xl text-green phosphor-subtle">Get Started</h2>
+<section class="py-24 px-6 bg-screen">
+  <div class="max-w-2xl mx-auto">
+    <div class="reveal mb-12 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl text-green phosphor-glow">&gt; INSTALLATION</h2>
     </div>
 
-    <!-- pip install -->
-    <div class="reveal reveal-delay-1 glass-panel p-6 mb-4">
-      <p class="font-mono text-xs text-green-dim mb-3"># Install via pip</p>
-      <code class="font-mono text-sm text-green">
-        <span class="text-green-dim">$</span> pip install mastercontrol
-      </code>
-    </div>
+    <div class="space-y-6">
+      <!-- Homebrew (recommended) -->
+      <div class="reveal reveal-delay-1 glass-panel p-6">
+        <p class="font-mono text-xs text-text-dim mb-3"># Homebrew (recommended)</p>
+        <div class="space-y-1 font-mono text-sm">
+          <p><span class="text-green-dim">$</span> <span class="text-green">brew tap mastercontrol/mcp</span></p>
+          <p><span class="text-green-dim">$</span> <span class="text-green">brew install mastercontrol</span></p>
+        </div>
+      </div>
 
-    <!-- Homebrew -->
-    <div class="reveal reveal-delay-2 glass-panel p-6 mb-4">
-      <p class="font-mono text-xs text-green-dim mb-3"># Install via Homebrew</p>
-      <code class="font-mono text-sm text-green">
-        <span class="text-green-dim">$</span> brew install mastercontrol
-      </code>
-    </div>
+      <!-- pip -->
+      <div class="reveal reveal-delay-2 glass-panel p-6">
+        <p class="font-mono text-xs text-text-dim mb-3"># pip</p>
+        <div class="font-mono text-sm">
+          <p><span class="text-green-dim">$</span> <span class="text-green">pip install mastercontrol</span></p>
+        </div>
+      </div>
 
-    <!-- From source -->
-    <div class="reveal reveal-delay-3 glass-panel p-6">
-      <p class="font-mono text-xs text-green-dim mb-3"># Install from source</p>
-      <div class="space-y-1 font-mono text-sm text-green">
-        <p><span class="text-green-dim">$</span> git clone https://github.com/mastercontrol/mcp.git</p>
-        <p><span class="text-green-dim">$</span> cd mcp</p>
-        <p><span class="text-green-dim">$</span> pip install -e .</p>
+      <!-- From source -->
+      <div class="reveal reveal-delay-3 glass-panel p-6">
+        <p class="font-mono text-xs text-text-dim mb-3"># From source</p>
+        <div class="space-y-1 font-mono text-sm">
+          <p><span class="text-green-dim">$</span> <span class="text-green">git clone https://github.com/mastercontrol/mcp.git</span></p>
+          <p><span class="text-green-dim">$</span> <span class="text-green">cd mcp && pip install -e .</span></p>
+        </div>
       </div>
     </div>
   </div>
