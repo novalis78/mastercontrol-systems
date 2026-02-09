@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CRTOverlay from '../components/CRTOverlay.astro';
+import Hero from '../components/Hero.astro';
+import SystemStatus from '../components/SystemStatus.astro';
+import Features from '../components/Features.astro';
+import Installation from '../components/Installation.astro';
+import Architecture from '../components/Architecture.astro';
+import Contributing from '../components/Contributing.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <CRTOverlay />
+  <main>
+    <Hero />
+    <SystemStatus />
+    <Features />
+    <Installation />
+    <Architecture />
+    <Contributing />
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+  );
+
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>

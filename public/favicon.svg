@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect x="4" y="4" width="56" height="56" rx="2" fill="none" stroke="#00FF41" stroke-width="1.5" opacity="0.8"/>
+  <text x="32" y="40" text-anchor="middle" font-family="monospace" font-size="24" font-weight="bold" fill="#00FF41">M</text>
+  <line x1="4" y1="4" x2="14" y2="14" stroke="#00FF41" stroke-width="0.5" opacity="0.4"/>
+  <line x1="60" y1="4" x2="50" y2="14" stroke="#00FF41" stroke-width="0.5" opacity="0.4"/>
+  <line x1="4" y1="60" x2="14" y2="50" stroke="#00FF41" stroke-width="0.5" opacity="0.4"/>
+  <line x1="60" y1="60" x2="50" y2="50" stroke="#00FF41" stroke-width="0.5" opacity="0.4"/>
+</svg>

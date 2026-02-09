@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #0A0A0A;
+  --color-screen: #0D1117;
+  --color-green: #00FF41;
+  --color-green-mid: #00CC33;
+  --color-green-dim: #008F26;
+  --color-cyan: #00E5FF;
+  --color-red: #FF3333;
+  --color-text: #B0FFB0;
+  --color-text-dim: #5A8A5A;
+  --font-display: 'VT323', monospace;
+  --font-body: 'Share Tech Mono', monospace;
+  --font-mono: 'Share Tech Mono', monospace;
+}
+
+/* --- Animations --- */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes crt-flicker {
+  0%, 100% { opacity: 1; }
+  3% { opacity: 0.97; }
+  6% { opacity: 1; }
+  42% { opacity: 0.98; }
+  44% { opacity: 1; }
+  77% { opacity: 0.97; }
+  80% { opacity: 1; }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes grid-pulse {
+  0%, 100% { opacity: 0.08; }
+  50% { opacity: 0.15; }
+}
+
+/* --- Base --- */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #00FF41 #0A0A0A;
+}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #00FF41; border-radius: 2px; }
+
+::selection {
+  background: rgba(0, 255, 65, 0.25);
+  color: #00FF41;
+}
+
+body {
+  background: #0A0A0A;
+  color: #B0FFB0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Reveal on scroll --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* --- Phosphor bloom --- */
+.phosphor {
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.6), 0 0 40px rgba(0, 255, 65, 0.3), 0 0 80px rgba(0, 255, 65, 0.1);
+}
+
+.phosphor-subtle {
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.4), 0 0 20px rgba(0, 255, 65, 0.15);
+}
+
+/* --- Glass desk panel --- */
+.glass-panel {
+  background: rgba(13, 17, 23, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 65, 0.12);
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.03), inset 0 1px 0 rgba(0, 255, 65, 0.05);
+}
+
+/* --- Terminal prompt --- */
+.prompt::before {
+  content: '$ ';
+  color: #00FF41;
+}
+
+/* --- Box drawing borders --- */
+.box-top { border-top: 1px solid rgba(0, 255, 65, 0.2); }
+.box-bottom { border-bottom: 1px solid rgba(0, 255, 65, 0.2); }
+
+/* --- CRT vignette --- */
+.vignette {
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.5) 100%);
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition-duration: 0.01s; }
+  * { animation-duration: 0.01s !important; }
+}

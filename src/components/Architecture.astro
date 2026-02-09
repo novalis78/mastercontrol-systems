@@ -1,0 +1,39 @@
+---
+---
+
+<section class="relative py-20 sm:py-28 px-6">
+  <div class="max-w-3xl mx-auto">
+    <div class="reveal mb-12">
+      <p class="font-mono text-xs text-green-dim mb-2">&gt; ARCHITECTURE</p>
+      <h2 class="font-display text-3xl sm:text-4xl text-green phosphor-subtle">System Design</h2>
+    </div>
+
+    <div class="reveal glass-panel p-6 sm:p-8 overflow-x-auto">
+      <pre class="font-mono text-xs sm:text-sm text-text leading-relaxed whitespace-pre">
+┌─────────────────────────────────────────────────┐
+│               HEARTBEAT LOOP                     │
+│                                                  │
+│   ┌──────────┐    ┌──────────┐    ┌──────────┐  │
+│   │  OBSERVE │───▶│  PROCESS │───▶│  STORE   │  │
+│   └──────────┘    └──────────┘    └──────────┘  │
+│        ▲                               │         │
+│        │         ┌──────────┐          │         │
+│        └─────────│  SLEEP   │◀─────────┘         │
+│                  │  (60s)   │                    │
+│                  └──────────┘                    │
+├─────────────────────────────────────────────────┤
+│               INTERACTIVE MODE                   │
+│                                                  │
+│   ┌──────────┐    ┌──────────┐    ┌──────────┐  │
+│   │  USER    │───▶│  AGENT   │───▶│  TOOLS   │  │
+│   │  INPUT   │    │  (LLM)   │    │  (MCP)   │  │
+│   └──────────┘    └──────────┘    └──────────┘  │
+│        ▲               │                │        │
+│        │          ┌────▼────┐           │        │
+│        └──────────│ MEMORY  │◀──────────┘        │
+│                   │ SEARCH  │                    │
+│                   └─────────┘                    │
+└─────────────────────────────────────────────────┘</pre>
+    </div>
+  </div>
+</section>

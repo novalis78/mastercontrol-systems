@@ -1,0 +1,61 @@
+---
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- TRON perspective grid floor -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute bottom-0 left-0 right-0 h-[60vh]" style="
+      perspective: 400px;
+      perspective-origin: 50% 0%;
+    ">
+      <div class="absolute inset-0" style="
+        transform: rotateX(60deg);
+        transform-origin: top center;
+        background:
+          repeating-linear-gradient(90deg, rgba(0,255,65,0.06) 0px, transparent 1px, transparent 80px, rgba(0,255,65,0.06) 80px),
+          repeating-linear-gradient(0deg, rgba(0,255,65,0.06) 0px, transparent 1px, transparent 80px, rgba(0,255,65,0.06) 80px);
+        animation: grid-pulse 6s ease-in-out infinite;
+      "></div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+    <!-- ASCII MCP Logo -->
+    <div class="mb-8 opacity-0" style="animation: fade-in 1s ease forwards 0.3s;">
+      <pre class="font-display text-green text-xs sm:text-sm leading-tight phosphor-subtle inline-block text-left">
+ ███╗   ███╗ ██████╗██████╗
+ ████╗ ████║██╔════╝██╔══██╗
+ ██╔████╔██║██║     ██████╔╝
+ ██║╚██╔╝██║██║     ██╔═══╝
+ ██║ ╚═╝ ██║╚██████╗██║
+ ╚═╝     ╚═╝ ╚═════╝╚═╝</pre>
+    </div>
+
+    <!-- Typewriter title -->
+    <div class="mb-4 opacity-0" style="animation: fade-in 0.5s ease forwards 0.8s;">
+      <h1 class="font-display text-3xl sm:text-5xl md:text-6xl text-green phosphor inline-block">
+        <span class="inline-block overflow-hidden whitespace-nowrap border-r-2 border-green" style="animation: typewriter 2s steps(32) 1s forwards, cursor-blink 0.8s step-end infinite;">
+          &gt; MASTER CONTROL PROGRAM v2.0
+        </span>
+      </h1>
+    </div>
+
+    <p class="font-body text-lg sm:text-xl text-text-dim mb-10 opacity-0" style="animation: fade-in 1s ease forwards 1.8s;">
+      &gt; Persistent memory for autonomous AI agents
+    </p>
+
+    <!-- Status indicators -->
+    <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 font-mono text-xs mb-12 opacity-0" style="animation: fade-in 1s ease forwards 2.2s;">
+      <span class="text-green-dim">[STATUS: <span class="text-green">ONLINE</span>]</span>
+      <span class="text-green-dim">[MEMORY: <span class="text-green">ACTIVE</span>]</span>
+    </div>
+
+    <!-- Install CTA -->
+    <div class="glass-panel inline-block px-6 py-3 opacity-0" style="animation: fade-in 1s ease forwards 2.5s;">
+      <code class="font-mono text-sm sm:text-base text-green">
+        <span class="text-green-dim">$</span> pip install mastercontrol
+      </code>
+    </div>
+  </div>
+</section>
