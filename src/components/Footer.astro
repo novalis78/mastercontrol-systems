@@ -1,7 +1,61 @@
 ---
+const affiliates = [
+  {
+    name: 'WEYLAND-YUTANI CORP',
+    url: 'https://weylandyu.com',
+    desc: 'BUILDING BETTER WORLDS // TERRAFORMING + SYNTHETICS',
+  },
+  {
+    name: 'TYRELL CORPORATION',
+    url: 'https://tyrell.industries',
+    desc: 'MORE HUMAN THAN HUMAN // REPLICANT DIVISION',
+  },
+  {
+    name: 'CYBERDYNE CAPITAL',
+    url: 'https://cyberdyne.capital',
+    desc: 'STRATEGIC CAPITAL // AUTONOMOUS DEFENSE',
+  },
+  {
+    name: 'DECIMA SYSTEMS',
+    url: 'https://decima.systems',
+    desc: 'INFRASTRUCTURE. INTELLIGENCE. INEVITABILITY.',
+  },
+  {
+    name: 'SAMARITAN',
+    url: 'https://samaritan.online',
+    desc: 'OPEN-ARCHITECTURE ARTIFICIAL SUPERINTELLIGENCE',
+  },
+  {
+    name: 'OMNI INDUSTRIES',
+    url: 'https://omni.industries',
+    desc: 'ROBOTICS // COMPUTE // NUCLEAR // SPACE',
+  },
+];
 ---
 
 <footer class="py-12 px-6 border-t border-green/10">
+  <div class="max-w-5xl mx-auto">
+    <!-- Intercorporate Exchange -->
+    <div class="reveal max-w-3xl mx-auto mb-12">
+      <pre class="font-mono text-xs text-green-dim select-none" aria-hidden="true">┌─── INTERCORPORATE EXCHANGE :: AFFILIATED CONGLOMERATES ───┐</pre>
+      <div class="grid sm:grid-cols-2 gap-x-8 gap-y-3 py-4 px-3 font-mono text-xs">
+        {affiliates.map((corp) => (
+          <a
+            href={`${corp.url}/?ref=mastercontrol`}
+            target="_blank"
+            rel="noopener"
+            class="group block"
+          >
+            <span class="text-green-dim group-hover:text-green transition-colors">│ </span>
+            <span class="text-green group-hover:phosphor-glow transition-colors">{corp.name}</span>
+            <span class="block pl-4 text-text-dim group-hover:text-text transition-colors">{corp.desc}</span>
+          </a>
+        ))}
+      </div>
+      <pre class="font-mono text-xs text-green-dim select-none" aria-hidden="true">└─── UPLINKS AUTHORIZED BY THE MCP. EXTERNAL GRIDS. ────────┘</pre>
+    </div>
+  </div>
+
   <div class="max-w-5xl mx-auto text-center">
     <div class="font-display text-xl text-green phosphor-glow">
       &gt; END OF LINE
